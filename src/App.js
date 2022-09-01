@@ -1,8 +1,8 @@
-import RestaurantCard from './components/RestaurantCards';
+import RestaurantList from './components/RestuarantList';
 import RemoveFavorite from './components/RemoveFavorite';
 import AddFavorite from './components/AddFavorite';
 import MenuBar from './components/MenuBar';
-import Header from './components/Header';
+import Hero from './components/Hero';
 import Footer from './components/Footer';
 import React from 'react';
 import './App.css';
@@ -10,12 +10,12 @@ import './App.css';
 function App() {
   return (
     <>
-      <h1>Brunch'n</h1>
+
+      <MenuBar />
+      <Hero />
       <AddFavorite />
       <RemoveFavorite />
-      <RestaurantCard />
-      <MenuBar />
-      <Header />
+      <RestaurantList />
       <Footer />
       
     </>
