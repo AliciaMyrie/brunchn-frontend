@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { Col, Row } from 'antd';
 
-// const [RestaurantList, setRestaurantList] = useState()
+
 
 export default function RestaurantList() {
   // const [ RestaurantsList, setRestaurantsList ] = useState()
@@ -27,13 +27,13 @@ export default function RestaurantList() {
         ) : (
           <div className="site-card-wrapper">
             <Row gutter={16}>
-                {restaurants.map((restaurant) => (
-                  <div key={restaurant._id}>
-                    <Col span={8}>
+              {restaurants.map((restaurant) => (
+                <div key={restaurant._id}>
+                  <Col span={8}>
                     <RestaurantCard restaurant={restaurant} />
-              </Col>
-                  </div>
-                ))}
+                  </Col>
+                </div>
+              ))}
             </Row>
           </div>
         )}

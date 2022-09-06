@@ -1,6 +1,7 @@
 import { Card } from 'antd';
 import img from '../assets/logo192.png';
 
+
 const { Meta } = Card;
 
 export default function RestaurantCard({ restaurant }) {
