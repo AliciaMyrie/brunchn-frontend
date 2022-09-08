@@ -10,7 +10,6 @@ export default function RestaurantList() {
   // const [ RestaurantsList, setRestaurantsList ] = useState()
   const [restaurants, setRestaurants] = useState([]);
 
-  console.log(restaurants);
 
   useEffect(() => {
     fetch('http://localhost:4050/getrestaurants')
