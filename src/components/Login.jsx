@@ -1,24 +1,23 @@
 import { useState } from 'react'
-import { useHistory } from 'react-router-dom'
-import firebase from 'firebase/app'
-import 'firebase/auth'
+// import { useHistory } from "react-router-dom";
+import { initializeApp } from 'firebase/app';
 import { firebaseConfig } from '../service/firebase'
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
-if(!firebase.apps.length) {
-  firebase.initializeApp(firebaseConfig)
-}
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
 
 export default function Login({ setUser }) {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  let history = useHistory()
+//   let history = useHistory()
   const handleLogin = (event) => {
     event.preventDefault()
-    firebase.auth().signInWithEmailAndPassword(email, password)
+    signInWithEmailAndPassword(email, password)
       .then(response => {
         console.log(response.user)
         setUser(response.user)
-        history.push('/')
+        // history.push('/')
       })
       .catch(error => alert(error.message))
   }
