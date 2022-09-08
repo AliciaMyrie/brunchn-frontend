@@ -11,8 +11,8 @@ import 'antd/dist/antd.min.css';
 import React, { useState } from 'react';
 import './App.css';
 import Restaurant from './components/Restaurant';
-// import Login from './components/Login';
-// import Favorites from './components/Favorites';
+import Login from './components/Login';
+import Favorites from './components/Favorites';
 
 
 
