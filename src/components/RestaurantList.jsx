@@ -3,6 +3,7 @@ import RestaurantCard from './RestaurantCard';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { Col, Row } from 'antd';
+import "../Styles/RestaurantList.css"
 
 
 
@@ -20,14 +21,14 @@ export default function RestaurantList() {
 
   return (
     <section>
-      <div>
+      <div className='restaurant-card-container'>
         {!restaurants ? (
           <h2>Loading .. </h2>
         ) : (
           <div className="site-card-wrapper">
             <Row gutter={16}>
               {restaurants.map((restaurant) => (
-                <div key={restaurant._id}>
+                <div className="restaurant-edge"  key={restaurant._id}>
                   <Col span={8}>
                     <RestaurantCard restaurant={restaurant} />
                   </Col>

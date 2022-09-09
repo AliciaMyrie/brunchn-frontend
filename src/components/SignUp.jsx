@@ -1,26 +1,38 @@
 import { useState } from 'react'
-import { useHistory } from 'react-router-dom'
-import firebase from "firebase"
+// import { useHistory } from 'react-router-dom'
+// import firebase from "firebase"
 import 'firebase/auth'
-import { firebaseConfig } from '../firebase'
-
-if(!firebase.apps.length) {
-  firebase.initializeApp(firebaseConfig)
-}
+import { firebaseConfig } from '../service/firebase'
+import{initializeApp} from 'firebase/app'
+import { createUserWithEmailAndPassword, getAuth } from 'firebase/auth';
+// if(!firebase.apps.length) {
+//   firebase.initializeApp(firebaseConfig)
+// }
 
 export default function Signup({ setUser }) {
+
+
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  let history = useHistory()
-  const handleSignup = (event) => {
+//   let history = useHistory()
+  const handleSignup = async (event) => {
     event.preventDefault()
-    firebase.auth().createUserWithEmailAndPassword(email, password)
-      .then(response => {
-        console.log(response.user)
-        setUser(response.user)
-        history.push('/')
-      })
-      .catch(error => alert(error.message))
+    const app =  await initializeApp(firebaseConfig)
+    const auth = getAuth(app)
+    const user = await createUserWithEmailAndPassword(
+        auth,email,password
+    )
+    .catch((err)=>console.log(err))
+    if (user){
+        console.log(user.user)
+    }
+    // firebase.auth().createUserWithEmailAndPassword(email, password)
+    //   .then(response => {
+    //     console.log(response.user)
+    //     setUser(response.user)
+        // history.push('/')
+    //   })
+    //   .catch(error => alert(error.message))
   }
   return (
     <form onSubmit={handleSignup}>

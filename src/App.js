@@ -13,6 +13,7 @@ import './App.css';
 import Restaurant from './components/Restaurant';
 import Login from './components/Login';
 import Favorites from './components/Favorites';
+import Signup from './components/SignUp';
 
 
 
@@ -22,6 +23,8 @@ function App() {
     <>
       <BrowserRouter>
         <MenuBar />
+        {/* <Login />
+        <Signup /> */}
         <Routes>
           {/* <Switch> */}
             {/* <Route path="/" element={<Favorites />} /> */}
@@ -30,7 +33,7 @@ function App() {
             {/* <Hero /> */}
             {/* <AddFavorite /> */}
             {/* <RemoveFavorite /> */}
-            {/* <Login /> */}
+           
             {/* <AddLike /> */}
             {/* <AddRestaurant/> */}
           {/* </Switch> */}

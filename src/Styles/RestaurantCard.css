@@ -1,0 +1,26 @@
+.restaurantCardContainer {
+  /* border-style: solid; */
+}
+
+.restaurant-card-image {
+  height: 200px;
+  object-fit: cover;
+  border-style: solid;
+  /* border-color: blue; */
+}
+
+.restaurantCard {
+  /* width: 200px;
+height: 200px; */
+  border-color: green;
+  border-style: solid;
+}
+
+.restaurant-edge {
+  margin: 5px;
+}
+
+.ant-row {
+  display: flex;
+  justify-content: center;
+}
