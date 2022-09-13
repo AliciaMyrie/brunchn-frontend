@@ -25,22 +25,24 @@ export default function Restaurant() {
   }, [id]);
 
   return (
-    <>
-      <Card
+    <div className='card-position'>
+    
+      <Card 
         hoverable
         style={{
           width: 240,
         }}
-        cover={<img alt="example" src={restaurant?.photo} />}
-      >
-        {/* Some stuff can go here */}
-        <Meta title={restaurant?.name} description={restaurant?.cuisine} />
+        
+        cover={<img className='"card-position' alt="example" src={restaurant?.photo} />}
+        >
+        <Meta title={restaurant?.name}  />
       </Card>
 
       {restaurant ? <AddLike restaurant={restaurant} fetchRestaurant={fetchRestaurant} /> : ''}
+      
       <h2>{restaurant?.address}</h2>
       <h2>{restaurant?.about}</h2>
       {/* <AddLike restaurant = {restaurant} /> */}
-    </>
+          </div>
   );
 }
