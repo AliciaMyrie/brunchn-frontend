@@ -26,13 +26,7 @@ export default function Signup({ setUser }) {
     if (user){
         console.log(user.user)
     }
-    // firebase.auth().createUserWithEmailAndPassword(email, password)
-    //   .then(response => {
-    //     console.log(response.user)
-    //     setUser(response.user)
-        // history.push('/')
-    //   })
-    //   .catch(error => alert(error.message))
+    
   }
   return (
     <form onSubmit={handleSignup}>
