@@ -25,7 +25,7 @@ export default function Restaurant() {
   }, [id]);
 
   return (
-    <div className='card-position'>
+    <>
     
       <Card 
         hoverable
@@ -33,7 +33,7 @@ export default function Restaurant() {
           width: 240,
         }}
         
-        cover={<img className='"card-position' alt="example" src={restaurant?.photo} />}
+        cover={<img alt="example" src={restaurant?.photo} />}
         >
         <Meta title={restaurant?.name}  />
       </Card>
@@ -43,6 +43,6 @@ export default function Restaurant() {
       <h2>{restaurant?.address}</h2>
       <h2>{restaurant?.about}</h2>
       {/* <AddLike restaurant = {restaurant} /> */}
-          </div>
+          </>
   );
 }
