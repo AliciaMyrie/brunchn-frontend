@@ -7,7 +7,7 @@ import "../Styles/RestaurantList.css"
 
 
 export default function RestaurantList() {
-  // const [ RestaurantsList, setRestaurantsList ] = useState()
+ 
   const [restaurants, setRestaurants] = useState([]);
 
 
@@ -23,24 +23,6 @@ export default function RestaurantList() {
  {restaurants && restaurants.map((restaurant, index) =>  <RestaurantCard key={index} restaurant={restaurant} />)}
 
 </section>
-    // <section>
-    //   <div className='restaurant-card-container'>
-    //     {!restaurants ? (
-    //       <h2>Loading .. </h2>
-    //     ) : (
-    //       <div className="site-card-wrapper">
-    //         <Row gutter={16}>
-    //           {restaurants.map((restaurant) => (
-    //             <div className="restaurant-edge"  key={restaurant._id}>
-    //               <Col span={8}>
-    //                 <RestaurantCard restaurant={restaurant} />
-    //               </Col>
-    //             </div>
-    //           ))}
-    //         </Row>
-    //       </div>
-    //     )}
-    //   </div>
-    // </section>
+   
   );
 }

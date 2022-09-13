@@ -1,13 +1,9 @@
 import { useState } from 'react'
-// import { useHistory } from 'react-router-dom'
-// import firebase from "firebase"
 import 'firebase/auth'
 import { firebaseConfig } from '../service/firebase'
 import{initializeApp} from 'firebase/app'
 import { createUserWithEmailAndPassword, getAuth } from 'firebase/auth';
-// if(!firebase.apps.length) {
-//   firebase.initializeApp(firebaseConfig)
-// }
+
 
 export default function Signup({ setUser }) {
 

@@ -10,14 +10,13 @@ const auth = getAuth(app);
 export default function Login({ setUser }) {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-//   let history = useHistory()
   const handleLogin = (event) => {
     event.preventDefault()
     signInWithEmailAndPassword(email, password)
       .then(response => {
         console.log(response.user)
         setUser(response.user)
-        // history.push('/')
+        
       })
       .catch(error => alert(error.message))
   }
