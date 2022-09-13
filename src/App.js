@@ -1,7 +1,5 @@
 import { BrowserRouter, Routes, Route, Switch } from 'react-router-dom';
 import RestaurantList from './components/RestaurantList';
-import RemoveFavorite from './components/RemoveFavorite';
-import AddRestaurant from './components/AddRestaurant';
 import AddFavorite from './components/AddFavorite';
 import MenuBar from './components/MenuBar';
 import AddLike from './components/AddLIke';
@@ -20,27 +18,25 @@ import Signup from './components/SignUp';
 function App() {
   // const [user, setUser]= useState(null)
   return (
-    <>
+    <div className='App'>
       <BrowserRouter>
         <MenuBar />
         {/* <Login />
         <Signup /> */}
         <Routes>
-          {/* <Switch> */}
             {/* <Route path="/" element={<Favorites />} /> */}
             <Route path="/" element={<RestaurantList />} />
             <Route path="/restaurant/:id" element={<Restaurant />} />
             {/* <Hero /> */}
             {/* <AddFavorite /> */}
-            {/* <RemoveFavorite /> */}
+            
            
             {/* <AddLike /> */}
             {/* <AddRestaurant/> */}
-          {/* </Switch> */}
         </Routes>
         <Footer />
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 

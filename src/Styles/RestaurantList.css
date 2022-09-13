@@ -1,4 +1,12 @@
-.restaurant-card-container {
-    
-    
+.restaurant-card-container{
+    min-height: 85vh;
+    max-height: 85vh;
+    width: 60%;
+    margin-left: 35%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
 }

@@ -1,35 +1,26 @@
-import React from "react"
-import { useState } from 'react';
-import { useEffect } from 'react';
+import React from 'react';
 
-
-export default function AddLike({restaurant}) {
-
-const [like, setLike] = useState("");
-console.log({like})
-  const addLike = () => {
-    fetch('http://localhost:4050/addlike/:id', {
+export default function AddLike({ restaurant, fetchRestaurant }) {
+  const addLike = (e) => {
+    // e.stopPropagation()
+    fetch(`https://brunchn-api-20513.web.app/addlike/${restaurant._id}`, {
       method: 'PATCH',
       mode: 'cors',
-      headers: { 
+      headers: {
         'Content-Type': 'application/json',
         // 'Authorization': token,
       },
-      body: JSON.stringify({likes: like })
+      body: JSON.stringify({ likes: 1 }),
     })
-      .then(results => results.json())
-      .then(data => {
-        setLike(data);
-        
+      .then((results) => results.json())
+      .then((data) => {
+        fetchRestaurant()
       })
       .catch(console.error);
-  }
+  };
   return (
-    <div onClick={()=> {addLike(restaurant._id)}}>♡{restaurant.likes && 0}
-    
-     
+    <div className='like-button' onClick={(e) => addLike(restaurant._id)}>
+      ♡ {restaurant.likes || 0}
     </div>
-  )
+  );
 }
-
-

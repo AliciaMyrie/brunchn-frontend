@@ -1,26 +1,40 @@
 .restaurantCardContainer {
-  /* border-style: solid; */
+  height: 18rem;
+  width: 15rem;
+  position: relative;
+  background: red;
+  margin: 0.5rem;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 .restaurant-card-image {
-  height: 200px;
-  object-fit: cover;
-  border-style: solid;
-  /* border-color: blue; */
+  min-width: 100%;
+  max-width: 100%;
+  height: 100%;
 }
 
-.restaurantCard {
-  /* width: 200px;
-height: 200px; */
-  border-color: green;
-  border-style: solid;
+.card-content-container {
+height: 50%;
+width: 100%;
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+position: absolute;
+bottom: 0;
+padding: 1rem;
+align-items: flex-start;
+justify-content: space-around;
+background: linear-gradient(to top, #fff, transparent 90%);
 }
-
-.restaurant-edge {
-  margin: 5px;
+.restaurant-name{
+  font-size: 1rem;
+  font-weight: 900;
 }
-
-.ant-row {
-  display: flex;
-  justify-content: center;
+.restaurant-cuisine{
+  font-size: .8rem;
+  font-weight: 200;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
 }
