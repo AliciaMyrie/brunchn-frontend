@@ -27,19 +27,6 @@ export default function RestaurantCard({ restaurant, restaurantId }) {
       />
 
     </div>
-    // <div className='restaurantCardContainer'>
-    //   <Card className='restaurantCard'
-    //   onClick={(e) => {e.stopPropagation(); navigate("/restaurant/"+ restaurant._id)}}
-    //     hoverable
-    //     style={{
-    //       width: 240,
-    //     }}
-    //     cover={<img className="restaurant-card-image"   alt="example" src={restaurant.photo} />}
-    //   >
-    //     {/* Some stuff can go here */}
-    //     <Meta title={restaurant.name} description={restaurant.cuisine} />
-    //   </Card>
-
-    // </div>
+    
   );
 }
